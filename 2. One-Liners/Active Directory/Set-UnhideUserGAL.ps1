@@ -1,0 +1,1 @@
+Set-ADUser Username -Replace @{msExchHideFromAddressLists=$false}

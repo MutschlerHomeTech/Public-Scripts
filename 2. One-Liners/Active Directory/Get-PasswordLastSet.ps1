@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -Properties PasswordLastSet,PwdLastSet | Select-Object Name,PasswordLastSet,PwdLastSet

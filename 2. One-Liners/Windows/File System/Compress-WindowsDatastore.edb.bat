@@ -1,0 +1,1 @@
+esentutl.exe /d %SystemRoot%\SoftwareDistribution\DataStore\DataStore.edb

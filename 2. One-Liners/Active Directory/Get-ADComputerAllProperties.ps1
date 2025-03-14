@@ -1,0 +1,1 @@
+Get-ADComputer -Identity "ComputerNameHere" -Properties * | Format-List

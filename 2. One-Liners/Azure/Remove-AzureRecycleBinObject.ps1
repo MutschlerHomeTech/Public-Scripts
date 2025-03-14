@@ -1,0 +1,1 @@
+Remove-MsolUser -UserPrincipalName "Username" -RemoveFromRecycleBin -Force

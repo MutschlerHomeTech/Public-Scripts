@@ -1,0 +1,1 @@
+(Get-Content 'C:\Temp\Computers.txt') | ForEach-Object { Get-Process -ComputerName $_ | Where-Object { $_.ProcessName -eq 'notepad' } | Stop-Process -Force }

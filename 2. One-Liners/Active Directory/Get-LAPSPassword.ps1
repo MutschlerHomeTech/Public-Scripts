@@ -1,0 +1,1 @@
+Get-LapsADPassword "ComputerNameHere" -AsPlainText

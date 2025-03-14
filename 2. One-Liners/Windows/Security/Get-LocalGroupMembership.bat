@@ -1,0 +1,1 @@
+net localgroup "administrators" > C:\Temp\LocalGroupMembership.txt

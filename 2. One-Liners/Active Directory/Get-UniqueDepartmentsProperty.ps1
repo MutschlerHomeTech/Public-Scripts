@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -Property department | Select-Object -ExpandProperty department | Sort-Object department -Unique

@@ -1,0 +1,1 @@
+Get-Acl "File/Folder/ShareNameHere" | Format-List

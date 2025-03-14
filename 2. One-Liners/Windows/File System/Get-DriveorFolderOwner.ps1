@@ -1,0 +1,1 @@
+Get-acl "\\fs1\shared\sales" | Format-List -Property Owner

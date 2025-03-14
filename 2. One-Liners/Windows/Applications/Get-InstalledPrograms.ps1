@@ -1,0 +1,1 @@
+Get-Package -Provider Programs -IncludeWindowsInstaller -IncludeSystemComponent | Select-Object -Property Name, Version, Publisher, InstalledOn, InstallLocation | Sort-Object -Property Name | Format-Table -AutoSize

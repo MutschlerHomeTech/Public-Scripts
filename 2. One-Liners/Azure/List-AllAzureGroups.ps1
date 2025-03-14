@@ -1,0 +1,2 @@
+Get-AzureADGroup -All:$true | Select-Object DisplayName, Description, MailEnabled, MailNickName, SecurityEnabled, Visibility, GroupTypes, Id | Sort-Object DisplayName
+# Get-AzureADGroup -All:$true | Select-Object DisplayName, Description, MailEnabled, MailNickName, SecurityEnabled, Visibility, GroupTypes, Id | Sort-Object DisplayName | Export-Csv -Path C:\Temp\AzureGroups.csv -NoTypeInformation

@@ -1,0 +1,1 @@
+Get-Content 'C:\temp\servers.txt' | ForEach-Object { Restart-Service -Name 'Spooler' -ComputerName $_ -Force }

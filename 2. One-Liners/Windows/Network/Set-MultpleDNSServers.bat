@@ -1,0 +1,1 @@
+netsh interface ipv4 add dnsserver name="Local Area Connection" address=192.168.1.1 index=2

@@ -1,0 +1,1 @@
+Get-ADPrincipalGroupMembership -Identity "UserNameHere" | Select-Object Name | Format-Table -AutoSize

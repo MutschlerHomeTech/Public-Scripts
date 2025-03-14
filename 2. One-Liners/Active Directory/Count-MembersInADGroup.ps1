@@ -1,0 +1,1 @@
+(Get-ADGroup "GroupName" -Properties *).Member.Count

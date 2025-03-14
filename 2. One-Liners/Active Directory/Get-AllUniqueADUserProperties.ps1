@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -Property title | Select-Object title | Sort-Object title -Unique

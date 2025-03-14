@@ -1,0 +1,1 @@
+Get-ADUser -Filter {msExchHideFromAddressLists -eq $true} | Select-Object Name

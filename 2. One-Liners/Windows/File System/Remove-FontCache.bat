@@ -1,0 +1,2 @@
+forfiles /p "%windir%\ServiceProfiles\LocalService\AppData\Local" /s /m "FontCache*" /c "cmd /c del @path" 
+# This script will delete all files that start with "FontCache" in the "C:\Windows\ServiceProfiles\LocalService\AppData\Local" directory. 

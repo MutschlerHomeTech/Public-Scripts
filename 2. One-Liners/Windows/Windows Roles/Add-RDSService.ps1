@@ -1,0 +1,1 @@
+Add-WindowsFeature -Name RDS-RD-Server,RSAT-RDS-Licensing-Diagnosis-UI -IncludeManagementTools

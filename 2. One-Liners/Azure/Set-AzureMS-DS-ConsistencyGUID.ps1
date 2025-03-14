@@ -1,0 +1,1 @@
+Set-ADGroup -Identity 'CN=Service Accounts - Deny Interactive Logon,OU=To Move,DC=corp,DC=mutschlerhome,DC=com' -Replace @{'mS-DS-ConsistencyGuid'='2155c959-564f-405e-bea9-395632aba1d1'} -ErrorAction Stop
