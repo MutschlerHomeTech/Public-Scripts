@@ -3,8 +3,7 @@
 # DATE     : 3-14-2025
 # EDIT     : 3-14-2025
 # PURPOSE  : This script prompts for a list of domains and counts the number of domain controllers in each domain
-# Compatible with all PowerShell versions 
-# Created with assistance from claude.ai
+# Compatible with all PowerShell versions
 #
 # VERSION  : 1    (Initial release)
 ##########################################
