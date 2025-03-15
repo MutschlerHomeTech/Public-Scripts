@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Get the CPU and RAM usage of the top 15 processes on a list of servers.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 $Output = 'C:\temp\Result.txt'
 $ServerList = Get-Content 'C:\temp\Serverlist.txt'
 

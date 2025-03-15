@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Ping a target and log the results with a timestamp.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 # The script below pings the target 10 times.
 
 Start-Transcript -Force -Path "C:\temp\ping.log"

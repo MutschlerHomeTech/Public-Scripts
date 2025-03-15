@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Add users to different distribution lists in Exchange Online based on a CSV file.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 $CSVFile = "C:\Temp\DL-Group-Members.csv"
 
 Try {

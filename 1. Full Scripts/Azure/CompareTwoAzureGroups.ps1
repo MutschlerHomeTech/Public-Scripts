@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Compare two Azure AD groups and list the differences.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 Connect-AzureAD
 
 $GROUP1=Get-AzureADGroupMember -ObjectId "c203a90f-0ec1-4c75-85c9-8d6e97f78a60" -All $true | Select-Object DisplayName, UserPrincipalName

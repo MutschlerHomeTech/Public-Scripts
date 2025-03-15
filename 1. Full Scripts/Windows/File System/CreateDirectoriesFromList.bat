@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Create directories from a list of names
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 set list=\\192.168.1.41\Emulation\OrganizedRoms\directories.txt
 set location=\\192.168.1.41\Emulation\OrganizedRoms
 

@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Test a Group Managed Service Account (gMSA) on all Domain Controllers.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 # This will run on all Domain Controllers. . Replace 'adhealthcheck' with actual gMSA name
 Invoke-Command -ComputerName (Get-ADDomainController -Filter *).Name -ScriptBlock {
     $Account = Get-ADServiceAccount -Filter { Name -eq 'adhealthcheck'}

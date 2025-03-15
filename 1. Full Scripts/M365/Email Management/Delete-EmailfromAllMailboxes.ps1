@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Delete a specific email from all mailboxes in Office 365 with a soft delete.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 #1. Connect to MSOnline in Powershell
 Import-Module ExchangeOnlineManagement
 Connect-IPPSSession -UserPrincipalName "UPN"

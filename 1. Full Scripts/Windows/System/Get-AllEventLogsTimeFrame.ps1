@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Get all event logs from a specified time frame.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 #example: get all logs in the last minute
 if($computerName -eq "" -OR $null -eq $computerName)
 {

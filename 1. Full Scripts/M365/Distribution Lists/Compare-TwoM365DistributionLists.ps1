@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Compare two Microsoft 365 distribution lists and identify differences.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 Connect-AzureAD
 
 $AW=Get-DistributionGroupMember -Identity "iPhone Notifications" | Select-Object Identity, PrimarySMTPAddress

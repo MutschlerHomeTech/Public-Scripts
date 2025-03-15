@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Match on-premises Active Directory users to existing Microsoft 365 users by linking their GUIDs as Immutable IDs.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 Import-Module ActiveDirectory
 $user = $null
 $Path = “c:\temp\exporteduser.txt”

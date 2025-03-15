@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Retrieve all disabled and inactive computers from Active Directory and categorize them.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 # Import the Active Directory module
 Import-Module ActiveDirectory
 

@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : This script will retrieve the product key from a Windows machine.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 Set WshShell = CreateObject("WScript.Shell")
 MsgBox ConvertToKey(WshShell.RegRead("HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DigitalProductId"))
 

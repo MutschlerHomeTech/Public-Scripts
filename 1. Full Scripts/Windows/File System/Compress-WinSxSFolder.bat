@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Compress the WinSxS folder to save disk space
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 #1. Query service status. Track its state.
 sc query msiserver
 sc query TrustedInstaller

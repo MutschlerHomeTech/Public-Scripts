@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Set the ImmutableID for an Azure AD user.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 #$credential = Get-Credential
 #Connect-MsolService -Credential $credential
 $ADUser = "user"

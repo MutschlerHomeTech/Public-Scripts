@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Import members to a distribution list from a CSV file.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 $GroupEmailID = "Sales@Crescent.com"
 $CSVFile = "C:\Temp\DL-Members.txt"
 

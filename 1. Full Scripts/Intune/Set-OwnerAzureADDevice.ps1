@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Set the owner of an Azure AD device.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 #1. First, you must ensure the AzureAD module is installed on your computer and then imported into your PowerShell session. To do that, you should use the following commands.
 Install-Module AzureAD
 Import-module AzureAD

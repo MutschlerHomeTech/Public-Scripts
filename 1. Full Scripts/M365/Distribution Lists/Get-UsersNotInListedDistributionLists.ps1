@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Retrieve a list of users who are not members of specified distribution lists.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 # Define the list of distribution lists
 $distributionLists = @("Managers", "Senior Managers")
 

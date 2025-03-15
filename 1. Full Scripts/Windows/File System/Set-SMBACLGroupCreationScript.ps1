@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Create SMB ACL groups in Active Directory.
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 param(
 [Parameter(Mandatory=$True)][String[]]$FolderName,
 [Parameter(Mandatory=$True)][String[]]$ServerName,

@@ -1,3 +1,12 @@
+##########################################
+# AUTHOR   : Ryan Mutschler
+# DATE     : 3-14-2025
+# EDIT     : 3-14-2025
+# PURPOSE  : Ping a host and log the results
+#
+# VERSION  : 1    (Initial release)
+##########################################
+
 @echo off
 
 set /p host=host Address:

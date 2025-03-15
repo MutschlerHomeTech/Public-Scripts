@@ -9,11 +9,6 @@
 ##########################################
 
 
-
-
-
-
- 
 #Setup script variables
 #add computers to computers variable to search for profiles on those computers
 [array] $Computers = "dcwipvmhsj001"
