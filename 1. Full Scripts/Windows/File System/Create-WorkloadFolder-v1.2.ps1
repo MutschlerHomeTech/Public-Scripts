@@ -1,19 +1,22 @@
 ##########################################
-# AUTHOR   : Ryan Mutschler
-# DATE     : 3-19-2025
-# EDIT     : 3-19-2025
-# PURPOSE  : This script creates folders for Changes, Incidents, or Projects following the specified naming convention
+# AUTHOR    : Ryan Mutschler
+# DATE      : 3-19-2025
+# EDIT      : 3-19-2025
+# PURPOSE   : This script creates folders for Changes, Incidents, or Projects following the specified naming convention
+# REPOSITORY: https://wikipedia.mutschlerhome.com/books/windows-scripts/page/create-workloadfolder-v12
 #
-# VERSION  : 1    (Initial release)
+# VERSION   : 1.0     (Initial release)
+# VERSION   : 1.1     (URL subfolder creation)
+# VERSION   : 1.2     (Communications subfolder creation)
 ##########################################
 
 # Function to validate input is not empty
-function Validate-Input {
+function Test-Input {
     param (
-        [string]$input
+        [string]$userInput
     )
     
-    if ([string]::IsNullOrWhiteSpace($input)) {
+    if ([string]::IsNullOrWhiteSpace($userInput)) {
         return $false
     }
     return $true
@@ -267,9 +270,21 @@ if (Test-Path -Path $newFolderPath) {
 
 # Create the folder
 try {
+    # Create the main workload folder
     New-Item -Path $newFolderPath -ItemType Directory | Out-Null
+    
+    # Create subfolders within the new workload folder
+    $urlFolderPath = Join-Path -Path $newFolderPath -ChildPath "URL"
+    $commsFolderPath = Join-Path -Path $newFolderPath -ChildPath "Communications"
+    
+    New-Item -Path $urlFolderPath -ItemType Directory | Out-Null
+    New-Item -Path $commsFolderPath -ItemType Directory | Out-Null
+    
     Write-Host "`nSuccess! Created folder:" -ForegroundColor Green
     Write-Host $newFolderPath
+    Write-Host "Subfolders created:"
+    Write-Host "- URL: $urlFolderPath"
+    Write-Host "- Communications: $commsFolderPath"
     
     # Open the folder in Explorer
     $openFolder = Read-Host "Would you like to open the folder now? (Y/N)"
