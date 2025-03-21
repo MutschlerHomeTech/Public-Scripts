@@ -8,18 +8,27 @@
 # VERSION   : 1.0     (Initial release)
 # VERSION   : 1.1     (URL subfolder creation)
 # VERSION   : 1.2     (Communications subfolder creation)
+# VERSION   : 1.3     (Added illegal character handling)
 ##########################################
 
-# Function to validate input is not empty
-function Test-Input {
+# Function to check for illegal Windows folder name characters
+function Test-IllegalCharacters {
     param (
-        [string]$userInput
+        [string]$FolderName
     )
     
-    if ([string]::IsNullOrWhiteSpace($userInput)) {
-        return $false
-    }
-    return $true
+    return $FolderName -match '[\\\/\:\*\?\"\<\>\|]'
+}
+
+# Function to remove illegal Windows folder name characters
+function Remove-IllegalCharacters {
+    param (
+        [string]$FolderName
+    )
+    
+    # Replace illegal characters with underscores or appropriate alternatives
+    $cleanName = $FolderName -replace '[\\\/\:\*\?\"\<\>\|]', '_'
+    return $cleanName
 }
 
 # Get the base workload folder path by reading from the Windows Registry
@@ -135,7 +144,41 @@ while (-not $validName) {
     
     if ([string]::IsNullOrWhiteSpace($workloadName)) {
         Write-Host "Name cannot be empty. Please enter a valid name." -ForegroundColor Red
-    } else {
+    } 
+    elseif ($workloadName -match "\/") {
+        # Found forward slash, ask user what to do
+        Write-Host "`nThe name contains a forward slash (/), which can create subfolders." -ForegroundColor Yellow
+        Write-Host "1. Create subfolders (e.g., 'folder/subfolder' creates 'folder' with 'subfolder' inside)"
+        Write-Host "2. Remove illegal characters and use a single folder"
+        $slashChoice = Read-Host "Enter your choice (1-2)"
+        
+        if ($slashChoice -eq "1") {
+            # User wants subfolders, proceed with the name as is
+            $validName = $true
+        }
+        else {
+            # User wants to remove illegal characters
+            #$originalName = $workloadName
+            $workloadName = Remove-IllegalCharacters -FolderName $workloadName
+            Write-Host "Cleaned name: '$workloadName'" -ForegroundColor Cyan
+            $confirmName = Read-Host "Is this acceptable? (Y/N)"
+            if ($confirmName.ToUpper() -eq "Y") {
+                $validName = $true
+            }
+        }
+    }
+    elseif (Test-IllegalCharacters -FolderName $workloadName) {
+        # Other illegal characters found
+        Write-Host "The name contains illegal Windows folder characters." -ForegroundColor Yellow
+        #$originalName = $workloadName
+        $workloadName = Remove-IllegalCharacters -FolderName $workloadName
+        Write-Host "Cleaned name: '$workloadName'" -ForegroundColor Cyan
+        $confirmName = Read-Host "Is this acceptable? (Y/N)"
+        if ($confirmName.ToUpper() -eq "Y") {
+            $validName = $true
+        }
+    }
+    else {
         $validName = $true
     }
 }
