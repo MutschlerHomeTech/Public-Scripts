@@ -41,16 +41,16 @@ try {
     $documentsPath = [System.Environment]::ExpandEnvironmentVariables($documentsPath)
     
     # Build the workload path
-    $workloadBasePath = Join-Path -Path $documentsPath -ChildPath "Workload"
+    $workloadBasePath = Join-Path -Path $documentsPath -ChildPath "MutschlerHome"
 }
 catch {
     Write-Host "Error accessing Registry. Falling back to default Documents location." -ForegroundColor Yellow
-    $workloadBasePath = Join-Path -Path $env:USERPROFILE -ChildPath "Documents\Workload"
+    $workloadBasePath = Join-Path -Path $env:USERPROFILE -ChildPath "Documents\MutschlerHome"
 }
 
 # Check if the workload folder exists, create it if not
 if (-not (Test-Path -Path $workloadBasePath)) {
-    Write-Host "Creating base Workload folder structure..."
+    Write-Host "Creating base MutschlerHome folder structure..."
     New-Item -Path $workloadBasePath -ItemType Directory | Out-Null
     
     # Create main category folders
@@ -100,7 +100,7 @@ if (-not (Test-Path -Path $workloadBasePath)) {
 }
 
 # Main script execution starts here
-Write-Host "=== Workload Folder Creation Tool ===" -ForegroundColor Cyan
+Write-Host "=== MutschlerHome Folder Creation Tool ===" -ForegroundColor Cyan
 Write-Host "This script will create a new folder for your workload item."
 
 # Prompt for workload type
