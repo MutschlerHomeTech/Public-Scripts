@@ -35,3 +35,4 @@ New-ADGroup â€“Name "$($Name)_List" -Description "$($Description) [List Only]" â
 Add-ADGroupMember -Identity "$($Name)_Full" -Members "Domain Admins"
 Add-ADGroupMember -Identity "$($Name)_Full" -Members "Enterprise Admins"
 Add-ADGroupMember -Identity "$($Name)_Full" -Members "Server Admins"
+Add-ADGroupMember -Identity "$($Name)_Read" -Members "Domain Users"
