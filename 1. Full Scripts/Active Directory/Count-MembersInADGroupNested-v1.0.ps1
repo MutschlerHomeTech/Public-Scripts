@@ -9,9 +9,6 @@
 # VERSION   : 1.0     (Initial release)
 ##########################################
 
-# Count-ADGroupMembers.ps1
-# Script to count members of an Active Directory group, including nested groups
-
 # Import the Active Directory module
 Import-Module ActiveDirectory
 
