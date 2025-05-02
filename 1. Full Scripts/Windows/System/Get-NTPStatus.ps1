@@ -9,8 +9,6 @@
 # VERSION   : 1.0     (Initial release)
 ##########################################
 
-# 
-
 # Define the path for the output CSV file
 $outputFile = "C:\Temp\W32TimeConfig_Results.csv"
 
